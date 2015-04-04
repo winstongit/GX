@@ -1,0 +1,30 @@
+一.编译环境安装
+1.解压csky-linux-tools-i386-20141117.tar.gz csky-elf.tar
+复制libelf.so.1到user/lib
+
+2.设置环境变量
+vi ~/.bashrc
+export PATH=$PATH:/home/xx/code/national/tool/csky-linux/bin
+export PATH=$PATH:/home/xx/code/national/tool/csky-elf/bin
+（具体路径根据自己实际路径配置）
+source ~/.bashrc
+
+二.代码编译
+1.buildroot
+make setup profile=public 
+make menuconfig
+make
+
+报错误
+Maybe you cannot install platform library correctly.
+make[2]: *** [copy_ko] Error 1
+make[2]: Leaving directory `/home/winston/code/national/sw/buildroot/package/devav'
+make[1]: *** [build] Error 1
+make[1]: Leaving directory `/home/winston/code/national/sw/buildroot/package'
+make: *** [build] Error 2
+
+注意务必将4个文件放在同级目录下
+buildroot_v1.9.2-2_1205.tar
+gxbus_v1.9.2-2_1205.tar
+library_v1.9.2-2_1205.tar
+solution_v1.9.2-2_1205.tar
