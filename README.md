@@ -43,11 +43,11 @@ add 201506091105 version sks code ,will update new version for auto pid sks late
 
 4.PC工具的调试
 计划3天完成。
-/*start***************************************************/
+#/*start***************************************************/
 a.关闭内核打印
 buildroot\profile\public\boot.config
 CMDLINE_VALUE = "mem=64M videomem=48M fbmem=16M console=ttyS0,115200 init=/init quiet"
 
 b.关闭串口打印：
 make menuconfig package->uart support 选中
-/*finish***************************************************/
+#/*finish***************************************************/
