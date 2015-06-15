@@ -20,3 +20,26 @@ UI在2周内完成。
 明天确认flash,硬件，数据过滤。
 
 4.项目总结
+
+---------------------------------------------------------------------------------------------------------------
+2015/06/12
+1.修改驱动
+Z:\code\national\gx\solution\app\module\app_ca_manager.c
+Z:\code\national\gx\solution\app\module\app_play_control.c
+Z:\code\national\gx\solution\app\app.c
+
+
+2015/06/15
+1.测试   app_20150610_v1_sksok.zip
+死机
+
+2.测试app3.zip 20150609 1429
+编译有问题，没查到原因
+
+3.测试app_20150610_v1.zip
+测试可以
+201506091105
+add 201506091105 version sks code ,will update new version for auto pid sks later
+
+4.PC工具的调试
+计划3天完成。
