@@ -7,3 +7,7 @@
 2.文件里面要客户标记和生成标记的工具。
 
 计划时间：3天
+
+分析程序配置文件逻辑组成：
+Z:\code\national\releaseledsw\solution\scripts\config_parse.sh
+BR2_PROJ_NAME="gx6602_linux_SA_NTBB"
