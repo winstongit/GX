@@ -11,3 +11,15 @@
 分析程序配置文件逻辑组成：
 Z:\code\national\releaseledsw\solution\scripts\config_parse.sh
 BR2_PROJ_NAME="gx6602_linux_SA_NTBB"
+
+
+2015/10/13
+---------------------------------------------------------------------------------- 
+1.解决公版软件版本信息菜单显示问题
+2.自动编译修正菜单类型，去掉老的菜单选择项
+menutest\solution\scripts\rule_theme.conf中的daqi:linux:GX_MENU_GXD1
+
+
+3.自动删除南美和中东库
+
+
