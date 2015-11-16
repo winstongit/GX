@@ -55,9 +55,23 @@ https://www.sendspace.com/file/zzq94d
 4)关于sks菜单慢的问题
 分析一 使用v1.0.67_20150822.bin测试，软件稳定。
 追踪：
-0901版本，添加iptv
+0901版本，添加iptv 
 0910版本 ，测试不行
 
+146测试可以
+147测试不行
+确认问题是以下函数导致
+int SKS_Get_Nim_lock(void)
+{
+	int tuner=1;
+	int lockstatus=0;
+	lockstatus=GxFrontend_QueryStatus(tuner);	
+	if(1==Tp_Para_Error)
+	{
+		lockstatus=0;
+	}
+	return lockstatus;
+}
 
 2.第三套菜单代码的完善
 所有功能模块的确认
