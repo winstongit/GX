@@ -30,7 +30,7 @@ menutest\solution\scripts\rule_theme.conf中的daqi:linux:GX_MENU_GXD1
 在版本162基础上确认sk,如果不存在sk卡的问题和中东2星是否能正常工作？
 如无问题，移植所有后续的修改。
 1）确认码流信息
--Eutelsat W12 12.5°
+Eutelsat W12 12.5°
 https://www.sendspace.com/file/bbaoeq
 11407/V/27500
 PAT Version Number: 7
@@ -41,10 +41,22 @@ PMT PID 2432 (0x0980) - Program 12304 AB1 Eu-Sa
 PMT PID 2433 (0x0981) - Program 12305 AB1 Eu
 PMT PID 2559 (0x09ff) - Program 12431 PCR
 
--W6 21.6°
+W6 21.6°
 https://www.sendspace.com/file/zzq94d
+没找到对应的TP
 
 2）确认软件sk是否能正常过滤数据？
+正在确认正确的buildroot
+编译成功后生成软件，测试sks锁定界面的速度和过滤数据正确性。
+
+3）gxbus 
+./build gx3201 linux
+
+4)关于sks菜单慢的问题
+分析一 使用v1.0.67_20150822.bin测试，软件稳定。
+追踪：
+0901版本，添加iptv
+0910版本 ，测试不行
 
 
 2.第三套菜单代码的完善
