@@ -27,11 +27,38 @@ menutest\solution\scripts\rule_theme.conf中的daqi:linux:GX_MENU_GXD1
 1.尽快确认中东软件软件
 使用中东码流确认过滤数据是否正确，确认music不能正常的原因，分析老的软件不正常的原因。
 并配合客户确认新的2个星是否能开。今天完成这个确认。
+在版本162基础上确认sk,如果不存在sk卡的问题和中东2星是否能正常工作？
+如无问题，移植所有后续的修改。
+1）确认码流信息
+-Eutelsat W12 12.5°
+https://www.sendspace.com/file/bbaoeq
+11407/V/27500
+PAT Version Number: 7
+Transport Stream ID: 10 (0x000a)
+PMT PID 16 (0x0010) - Network 
+PMT PID 32 (0x0020) - Program 23 KTO
+PMT PID 2432 (0x0980) - Program 12304 AB1 Eu-Sa
+PMT PID 2433 (0x0981) - Program 12305 AB1 Eu
+PMT PID 2559 (0x09ff) - Program 12431 PCR
+
+-W6 21.6°
+https://www.sendspace.com/file/zzq94d
+
+2）确认软件sk是否能正常过滤数据？
+
 
 2.第三套菜单代码的完善
 所有功能模块的确认
 计划时间本月底完成。
 2天sk
+
+
+
+
+
+
+
+
 2天ik
 2天iptv
 2天pat
