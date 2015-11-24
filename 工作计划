@@ -122,3 +122,15 @@ tar -jcvf linux-2.6.27.55.tar.bz2 linux-2.6.27.55
 2.ik测试没问题
 3.关于这个打印的问题，需要跟童确认。
 [   19.500000] XXXXXXXXXXXXXXXX Register Failed, NOT -D chip, firmware is hard decoder
+
+关于代码：
+git clone git@192.168.1.38:/home/git/repositories/gx/buildroot.git 
+
+4.验证发现机器添加TP很慢？？
+
+5.打开6种语言不行？
+
+buildroot\profile\public\boot.config
+CMDLINE_VALUE = "mem=64M videomem=48M fbmem=16M console=ttyS0,115200 init=/init quiet"
+
+
