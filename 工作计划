@@ -133,4 +133,32 @@ git clone git@192.168.1.38:/home/git/repositories/gx/buildroot.git
 buildroot\profile\public\boot.config
 CMDLINE_VALUE = "mem=64M videomem=48M fbmem=16M console=ttyS0,115200 init=/init quiet"
 
+2015/11/25
+---------------------------------------------------------------------------------- 
+1.验证公版软件，测试加Tp慢的问题
+不慢
+但是tuner不对
+
+2.修改公版tuner
+buildroot\profile\public\devfe
+
+
+3.测试版本192，使用最新buildroot
+不行的话使用
+
+使用次版本buildroot
+git checkout e9590ed16b570bd099338396d9219cc82a42c4dc
+测试最新软件可以，没有慢的问题
+
+生成最新软件，中东版本，测试有问题
+
+4.开机速度问题
+老的sdk 开机时间：18秒
+新的sdk开机速度 ：
+
+
+
+
+
+
 
