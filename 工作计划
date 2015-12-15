@@ -5,7 +5,8 @@ a.app_ecm_start
 b.app_ecm_store_info
 
 对比代码的结果：
-
+/home/winston/code/national/goodsw/gxbus/epg/gxepg_manage.c:GxBus_UnregisterCompFunc:2119
+/home/winston/code/national/goodsw/gxbus/epg/gxepg_manage.c:GxBus_RegisterCompFunc:2088
 
 
 2015/12/11
