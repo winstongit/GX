@@ -8,6 +8,15 @@ b.app_ecm_store_info
 /home/winston/code/national/goodsw/gxbus/epg/gxepg_manage.c:GxBus_UnregisterCompFunc:2119
 /home/winston/code/national/goodsw/gxbus/epg/gxepg_manage.c:GxBus_RegisterCompFunc:2088
 
+get strenth err !!!!!
+get bit err rate err!!
+换台不行，播放卡
+
+XCAS_Start begin
+XCAS_Stop
+发现原因，原来是不知道怎么把
+bActive被弄成0了。
+
 
 2015/12/11
 ---------------------------------------------------------------------------------- 
