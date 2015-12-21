@@ -1,0 +1,114 @@
+[摘要：拆建GX6605开辟情况及调试情况 为轻易开辟，做一些纪录。 主机情况为 X86， 操纵体系为Ubuntu, 应用32位版本，若现实应用碰到缺乏静态链接库的致意拆32位兼容库。 假定用户名为blacker] 
+
+搭建GX6605开发环境及调试环境
+
+为方便开发，做一些记录。
+
+主机环境为 X86， 操作系统为Ubuntu, 使用32位版本，若实际使用遇到缺少动态链接库的请安装32位兼容库。
+假定用户名为blacker, 家目录为 /home/blacker，命令中出现blacker时请自行修改为实际的名称。
+
+
+1.  安装编译器
+
+
+先下载编译器压缩包， 名字为csky-ecos-toolchain-4.5.1-20130312.tar.bz2， 解开压缩包
+
+tar xvf csky-ecos-toolchain-4.5.1-20130312.tar.bz2
+在当前目录下得到目录csky-elf。 创建目录/home/blacker/workspcae/compiler
+
+mkdir -p /home/blacker/workspcae/compiler
+当解压缩得到的csky-elf移到刚刚创建的目录下。
+
+mv csky-elf /home/blacker/workspcae/compiler
+现在设置环境变量。编辑当前用户的配置文件: ~/.bashrc, 在文件尾部添加一行
+
+export PATH=$PATH:/home/blacker/workspace/compiler/csky-elf/bin/
+保存退出，使当前修改生效， 执行命令。
+
+source ~/.bashrc
+检查安装是否成功。 
+csky-elf-gcc --version
+
+终端会打印出：
+
+csky-elf-gcc (CSKY TOOLCHAINS V2.1, Build on 20130312) 4.5.1
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+说明安装编译器成功，并且设置路径正确。
+
+
+2. 安装调试代理DebugServer
+
+下载安装包DebugServerConsole-linux-i386-4.1.01-20140908.sh， 由于资料经过各种途径传递，有可能在复制资料的过程中丢失一些文件属性。
+
+这个安装包是一个可执行的安装文件，应该具有可执行权限， 首先检查一下该文件是否有可执行权限，若没有可执行权限，添加执行权限。
+
+chmod +x DebugServerConsole-linux-i386-4.1.01-20140908.sh
+开始安装。
+
+sudo ./DebugServerConsole-linux-i386-4.1.01-20140908.sh
+这里说明一下为什么要使用sudo进行安装，原因在于安装时会往系统目录添加一个配置文件，用于添加动态链接库路径。安装成功参见
+
+/etc/ld.so.conf.d/csky-debug.conf
+安装过程程序会询问。
+
+Do you agree to install this software [yes/no]:yes
+set full installing path: /home/blacker/workspace/tools
+调试代理服务程序将会安装到/home/blacker/workspace/tools目录下， DebugServerConsole.elf即为代理服务程序。
+
+将USB +ICE JTAG调试器7根排线的一端连接到板子的JTAG插槽上，另一端为USB接口，插到主机的USB口上。
+
+接通板子电源上电。
+
+
+
+在主机终端检查是否检测USB设备：
+
+lsusb
+若列出的内容包含下面一行，表示已经找到设备。
+
+Bus 001 Device 060: ID c510:b000
+执行代理服务程序：
+
+sudo  ./DebugServerConsole.elf
+若出现以信息，表明调试代理服务程序运行成功，板子与调试器连接正常，调试器与主机连接正常。
+
++---                                                    ---+
+|  C-Sky Debugger Server (Build: Sep  8 2014)              |
+   User  Layer Version : 4.1.01 
+   Proxy Layer Version : 1.7 
+   Op    Layer Version : USBICE V3.2 
+|  Copyright (C) 2009 Hangzhou C-SKY Microsystems co.,ltd  |
++---                                                    ---+
+C-SKY USBICE: 12000kHZ, 5-wire, Without DDC.
+C-SKY CPU ID:
+    0x10380462
+Target Chip Info:
+    CPU Type is CK610MFx, in LITTLE Endian.
+    Foundry is TSMC.
+    Process is 55nm.
+C-SKY GDB connect command:
+    target jtag jtag://127.0.1.1:1025
+Press CTRL+c to exit.
+调试代理服务已经正常运行， 使用本地IP地址， 并监听1025端口， 等待 GDB调试请求。
+
+此命令有些选项可配置，具体参见帮助。
+
+./DebugServerConsole.elf -h
+
+
+3. 使用GDB连接调试代理服务
+
+
+
+在终端上执行命令。
+
+csky-elf-gdb
+终端进入GDB交互模式， 并且提示符变为(cskygdb)
+
+target jtag jtag://127.0.0.1:1025
+若连接成功，则调试代理服务窗口打印出类似信息。
+
+Server get connection from 127.0.0.1, at time 15:53.
+此可以在GDB窗口进行调试。 执行各类GDB命令。
