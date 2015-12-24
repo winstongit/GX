@@ -1,0 +1,28 @@
+ 
+一，编译器设置
+vi ~/.bashrc
+export PATH=$PATH:/home/winston/code/6605s/csky-elf/bin/
+
+保存退出
+
+source ~/.bashrc
+
+终端会打印出： 
+csky-elf-gcc --version
+csky-elf-gcc (CSKY TOOLCHAINS V2.1, Build on 20130312) 4.5.1
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+说明安装编译器成功，并且设置路径正确。
+
+二，编译说明
+1.solution路径下make clean;make;make bin
+
+2.修改Z:\code\6605s\eCOS_V1.7.0_beta\gxbus库路径build文件里
+/home/winston/code/6605s/eCOS_V1.7.0_beta/library/goxceed
+./build gx3211 ecos  报错？这里有疑问
+
+三 svn仓库
+tortoisesvn import 对应的文件夹
+提交的版本信息
+first add V1.7.0 6605s code 
