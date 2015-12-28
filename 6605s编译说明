@@ -26,3 +26,24 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 tortoisesvn import 对应的文件夹
 提交的版本信息
 first add V1.7.0 6605s code 
+
+四 调试和整合
+三个阶段
+初步阶段 12月28日开始，12月31日给出初步结果，1月9日给出明确的测试结果。
+
+1.flash空间确认
+我先整合代码看还有多少，是否够用？
+整合自有功能和软P
+计划2天时间
+
+2.其他规格确认
+cpu ID
+加密
+互更
+调试方式
+2天确认
+
+3.D的确认
+能不能用
+2天确认
+
