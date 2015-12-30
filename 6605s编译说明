@@ -31,6 +31,7 @@ DDR 1G
 Flash 8M bytes
 SM optional
 
+
 2.整合dm的code,2天后续测试功能。
 
 
@@ -91,9 +92,3 @@ ID NAME       FS         CRC32  UPDATE VERION    START      SIZE      USED    US
 3  KERNEL  RO RAW     52CAF6E8       0      0 00020000   2.31 MB   2.30 MB  99.5 %  *
 4  ROOT    RO CRAMFS  58432F12       0      0 00270000 832.00 KB 832.00 KB 100.0 %  *
 5  DATA    RW MINIFS  FF000000       0      0 00340000 768.00 KB      1  B   0.0 %  *
-
-
-
-
-
-
