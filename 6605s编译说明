@@ -57,6 +57,12 @@ ID NAME       FS         CRC32  UPDATE VERION    START      SIZE      USED    US
 4  ROOT    RO CRAMFS  58432F12       0      0 00270000 832.00 KB 832.00 KB 100.0 %  *
 5  DATA    RW MINIFS  FF000000       0      0 00340000 768.00 KB      1  B   0.0 %  *
 
+六 产品规划
+1.CPU ID
+2.CPU OTP
+3.Flash OTP
+4.加密方式
+5.整体框架和功能重点
 
 
 
