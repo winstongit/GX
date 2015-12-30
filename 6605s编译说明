@@ -10,23 +10,26 @@
 今天工作内容
 1.搞清硬件的设计及进度 接口 面板 及gpio 调试
 6605S公版：
-面板 fd650、ct1642 power /up/down/left/right?
-USB 
-RCA
-RS232
-SM
-RDA5815M
-Tuner
+面板 mini没面板，盒子用fd650（按键power /up/down/left/right待确认，软件也支持ct1642）
+USB 2个
+RCA 耳机孔
+RS232 耳机孔
+Tuner RDA5815M
+Frontend 
+DDR 512M
+Flash 4M bytes
+SM optional
 
 6622公版：
-面板 fd650、ct1642 power /up/down/left/right?
-USB 
-RCA
-RS232
-SM
-RDA5815M
-Tuner?
-
+VFD面板 6311
+USB 2个
+RCA 4个
+RS232 耳机孔
+Tuner 2018
+Frontend 
+DDR 1G
+Flash 8M bytes
+SM optional
 
 2.整合dm的code,2天后续测试功能。
 
