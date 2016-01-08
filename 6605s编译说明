@@ -3,8 +3,13 @@
 stack_check_thread
 2)存储
 a.GxBus_ConfigGetInt
-b.关于数据保存，放在/home/gx/文件夹下
+b.关于数据保存，
 GxCore_Open
+文件的路径说明
+/home/gx/此文件夹可读写
+/mnt 此文件？
+/dev/***设备节点 此文件？
+
 GxCore_ReadAt
 GxCore_Close
 
