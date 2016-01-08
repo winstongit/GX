@@ -1,7 +1,12 @@
 关于DM
 1) 菜单
 stack_check_thread
-2)
+2)存储
+a.GxBus_ConfigGetInt
+b.关于数据保存，放在/home/gx/文件夹下
+GxCore_Open
+GxCore_ReadAt
+GxCore_Close
 
 关于PV的问题
 1）问题是因为奇偶控制字设置有问题
