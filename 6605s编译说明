@@ -9,9 +9,10 @@ GxCore_Open
 /home/gx/此文件夹可读写
 /mnt 此文件？
 /dev/***设备节点 此文件？
-
 GxCore_ReadAt
 GxCore_Close
+3)sn
+8C C6 D3 F7 29 BA 72 96 
 
 关于PV的问题
 1）问题是因为奇偶控制字设置有问题
