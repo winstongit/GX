@@ -1,6 +1,26 @@
 低成本产品进度：
 一软件合成
+1.关于中东和南美区分
+	echo "choice" >> $config_proj_conf
+	echo "config BR2_PROJ_DAQI_GX6602_LINUX_ME" >> $config_proj_conf
+	echo "    bool \"ME LED\""  >> $config_proj_conf
+	echo "    help" >> $config_proj_conf
+	echo "      ME GX6602 LINUX" >> $config_proj_conf
+	echo "" >> $config_proj_conf
+	echo "" >> $config_proj_conf
+	echo "config BR2_PROJ_NAME" >> $config_proj_conf
+	echo "    string" >> $config_proj_conf		
+	echo "    default \"GX6602_LINUX_ME\" if BR2_PROJ_DAQI_GX6602_LINUX_ME" >> $config_proj_conf		
+	echo "endchoice" >> $config_proj_conf
+
+
+
+
+
+
 1.确认网络状态接口函数
+getnetworkstatue
+
 2.确认cpu id函数
 二硬件
 还需5天左右
