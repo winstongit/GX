@@ -1,3 +1,7 @@
+关于tuner
+1.default.xml @后面第一位表示IQ
+
+
 低成本产品进度：
 一软件合成
 1.关于中东和南美区分
@@ -13,15 +17,10 @@
 	echo "    default \"GX6602_LINUX_ME\" if BR2_PROJ_DAQI_GX6602_LINUX_ME" >> $config_proj_conf		
 	echo "endchoice" >> $config_proj_conf
 
-
-
-
-
-
-1.确认网络状态接口函数
+2.确认网络状态接口函数
 getnetworkstatue
 
-2.确认cpu id函数
+3.确认cpu id函数
 二硬件
 还需5天左右
 
