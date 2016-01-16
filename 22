@@ -8,8 +8,21 @@
 
 实际操作
 1，合成全部代码
+已好
 
 2，验证cpu id
+修改：
+1)增加底层otp支持，buildroot\kernel\2.6.27.55\drivers\gx_otp\gx_otp.c及linux-2.6.27.55.tar.bz2
+2)使用最新接口otp_chip.c
+已好,6622-D没有id,其他型号有id
+
+3.验证otp
+修改：
+1）m25p80.c到buildroot\kernel\2.6.27.55\drivers\mtd\devices下。
+2）
+
+
+4.验证dm
 
 
 
