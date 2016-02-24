@@ -28,3 +28,6 @@ buildroot_v1.9.2-2_1205.tar
 gxbus_v1.9.2-2_1205.tar
 library_v1.9.2-2_1205.tar
 solution_v1.9.2-2_1205.tar
+
+三，demod
+./build csky linux
